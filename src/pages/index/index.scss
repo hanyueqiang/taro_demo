@@ -1,0 +1,24 @@
+.todo {
+    display: flex;
+    margin-top: 30PX;
+    .todo-input {
+        height: 35PX;
+        width: 220PX;
+        border: 1PX solid #ccc;
+        margin-left: 10PX;
+        padding: 0 8PX;
+        border-radius: 6PX;
+    }
+    .todo-addBtn {
+        height: 35PX;
+        width: 80PX;
+        line-height: 35PX;
+        margin: 0;
+        margin-left: 8PX;
+        background: yellowgreen;
+        border: 0;
+    }
+}
+.show-value {
+    padding: 10PX;
+}
