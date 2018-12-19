@@ -31,6 +31,12 @@ export default class Index extends Component {
       value: ''
     })
   }
+  
+  navigateTo () {
+    Taro.navigateTo({
+      url: '/pages/about/about'
+    })
+  }
 
   render () {
     return (
@@ -40,6 +46,7 @@ export default class Index extends Component {
           <Button className='btn-max-w todo-addBtn' plain onClick={this.delAllHandle}>清除</Button>
         </View>
         <View className='show-value'>{this.state.value}</View>
+        <View className='show-value' onClick={this.navigateTo}>下一页</View>
       </View>
     )
   }
