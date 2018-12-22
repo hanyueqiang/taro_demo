@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Input, Button } from '@tarojs/components'
+import { View } from '@tarojs/components'
+import { AtButton } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -41,12 +42,9 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <View className='todo'>
-          <Input className='todo-input' value={this.state.value} type='text' placeholder='请输入内容' onInput={this.inputChange}/>
-          <Button className='btn-max-w todo-addBtn' plain onClick={this.delAllHandle}>清除</Button>
+        <View className='index'>
+         <AtButton type='primary'>按钮文案</AtButton>
         </View>
-        <View className='show-value'>{this.state.value}</View>
-        <View className='show-value' onClick={this.navigateTo}>下一页</View>
       </View>
     )
   }
