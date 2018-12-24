@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { AtGrid } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -12,15 +12,15 @@ export default class Index extends Component {
     value: ''
   }
 
-  componentWillMount () { }
+  componentWillMount() { }
 
-  componentDidMount () { }
+  componentDidMount() { }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
   inputChange = (e) => {
     this.setState({
@@ -32,18 +32,33 @@ export default class Index extends Component {
       value: ''
     })
   }
-  
-  navigateTo () {
+
+  navigateTo() {
     Taro.navigateTo({
       url: '/pages/about/about'
     })
   }
 
-  render () {
+  render() {
     return (
       <View className='index'>
         <View className='index'>
-         <AtButton type='primary'>按钮文案</AtButton>
+        <AtGrid data={
+          [
+             {
+               image: '',
+               value: '领取中心'
+             },
+             {
+               image: '',
+               value: '找折扣'
+             },
+             {
+               image: '',
+               value: '领会员'
+             }
+           ]
+         } />
         </View>
       </View>
     )
