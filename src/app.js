@@ -14,7 +14,9 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
-      'pages/about/about'
+      'pages/about/jsbase',
+      'pages/about/vue',
+      'pages/about/react',
     ],
     window: {
       backgroundTextStyle: 'light',

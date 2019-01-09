@@ -1,9 +1,9 @@
 import './about.scss'
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-export default class About extends Component {
+export default class React extends Component {
   config = {
-    navigationBarTitleText: '详情页'
+    navigationBarTitleText: 'React'
   }
 
   constructor () {

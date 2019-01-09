@@ -12,15 +12,15 @@ export default class Index extends Component {
     value: ''
   }
 
-  componentWillMount () { }
+  componentWillMount() { }
 
-  componentDidMount () { }
+  componentDidMount() { }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
   inputChange = (e) => {
     this.setState({
@@ -32,18 +32,38 @@ export default class Index extends Component {
       value: ''
     })
   }
-  
-  navigateTo () {
+
+  navigateTo(e) {
+    let url = '/pages/about/jsbase';
+    if (e == 'js') {
+
+    }else if() {
+
+    }
     Taro.navigateTo({
-      url: '/pages/about/about'
+      url: '/pages/about/jsbase'
     })
   }
 
-  render () {
+  render() {
     return (
       <View className='index'>
         <View className='index'>
-         <AtButton type='primary'>按钮文案</AtButton>
+          <View className='index-title'>
+            面试宝典
+          </View>
+          <View className='index-aBtn'>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'js')}>JS基础 >></AtButton>
+          </View>
+          <View className='index-aBtn'>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'vue')}>Vue >></AtButton>
+          </View>
+          <View className='index-aBtn'>
+            <AtButton type='primary' className='index-button' onClick={this.navigateToReact.bind(this, 'react')}>React >></AtButton>
+          </View>
+          <View className='index-aBtn'>
+            <AtButton type='primary' className='index-button' onClick={this.navigateToVue.bind(this, 'node')}>NodeJs >></AtButton>
+          </View>
         </View>
       </View>
     )
