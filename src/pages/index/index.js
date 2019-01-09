@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { AtGrid } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -35,11 +35,11 @@ export default class Index extends Component {
 
   navigateTo(e) {
     let url = '/pages/about/jsbase';
-    if (e == 'js') {
+    // if (e == 'js') {
 
-    }else if() {
+    // }else if() {
 
-    }
+    // }
     Taro.navigateTo({
       url: '/pages/about/jsbase'
     })
