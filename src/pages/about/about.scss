@@ -1,9 +1,10 @@
-.about {
-    text-align: center;
-    margin-top: 150PX;
-    padding: 50PX;
-    .info{
-      margin-top: 50PX;
-      font-size: 28PX;
-    }
+.js-base-card {
+  margin-top: 16PX;
+}
+.js-base {
+  margin-bottom: 16PX;
+  margin-top: 16PX;
+}
+.js-card-gutter {
+  margin: 6PX 0;
 }

@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtGrid } from 'taro-ui'
+import { AtGrid, AtButton, AtToast } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -9,7 +9,8 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
   state = {
-    value: ''
+    value: '',
+    isOpened: false
   }
 
   componentWillMount() { }
@@ -34,14 +35,20 @@ export default class Index extends Component {
   }
 
   navigateTo(e) {
-    let url = '/pages/about/jsbase';
-    // if (e == 'js') {
-
-    // }else if() {
-
-    // }
+    let url = '/pages/about/jsbase'
+    if (e == 'vue') {
+      url = '/pages/about/vue'
+    } else if (e == 'react') {
+      url = '/pages/about/react'
+    } else if (e == 'node') {
+      this.setState({
+        isOpened: true
+      })
+      return
+      //url = '/pages/about/node'
+    }
     Taro.navigateTo({
-      url: '/pages/about/jsbase'
+      url
     })
   }
 
@@ -53,18 +60,24 @@ export default class Index extends Component {
             面试宝典
           </View>
           <View className='index-aBtn'>
-            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'js')}>JS基础 >></AtButton>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'js')}>JS基础</AtButton>
           </View>
           <View className='index-aBtn'>
-            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'vue')}>Vue >></AtButton>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'vue')}>Vue</AtButton>
           </View>
           <View className='index-aBtn'>
-            <AtButton type='primary' className='index-button' onClick={this.navigateToReact.bind(this, 'react')}>React >></AtButton>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'react')}>React</AtButton>
           </View>
           <View className='index-aBtn'>
-            <AtButton type='primary' className='index-button' onClick={this.navigateToVue.bind(this, 'node')}>NodeJs >></AtButton>
+            <AtButton type='primary' className='index-button' onClick={this.navigateTo.bind(this, 'node')}>NodeJs</AtButton>
           </View>
         </View>
+        <AtToast
+          isOpened={this.state.isOpened}
+          icon={'clock'}
+          duration={2000}
+          text={'正在开发中...'}
+        ></AtToast>
       </View>
     )
   }

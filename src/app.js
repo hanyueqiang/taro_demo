@@ -17,6 +17,7 @@ class App extends Component {
       'pages/about/jsbase',
       'pages/about/vue',
       'pages/about/react',
+      'pages/about/node',
     ],
     window: {
       backgroundTextStyle: 'light',
